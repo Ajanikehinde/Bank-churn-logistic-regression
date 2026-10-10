@@ -62,7 +62,7 @@ The modelling pipeline uses:
 
 * `IsActiveMember`
 
-`HasCrCard`, `Tenure` and `EstimatedSalary` are excluded from the final feature set. This choice was made for the logistic regression models and has **not** been shown to be harmless for the Random Forest: the companion project [`bank-churn-classification`](https://github.com/Ajanikehinde/bank-churn-classification) keeps all features and reports a higher Random Forest ROC-AUC (0.8542 vs. 0.8400 here for the default forest). See [Relationship to the Companion Project](#relationship-to-the-companion-project).
+`HasCrCard`, `Tenure` and `EstimatedSalary` are excluded from the final feature set. This choice was made for the logistic regression models and has **not** been shown to be harmless for the Random Forest: the companion project [`Bank-Churn-Classification-Model`](https://github.com/Ajanikehinde/Bank-Churn-Classification-Model) keeps all features and reports a higher Random Forest ROC-AUC (0.8542 vs. 0.8400 here for the default forest). See [Relationship to the Companion Project](#relationship-to-the-companion-project).
 
 ---
 
@@ -266,9 +266,9 @@ This confirms that the encoding correction did not change the measured test accu
 
 ## Relationship to the Companion Project
 
-[`bank-churn-classification`](https://github.com/Ajanikehinde/bank-churn-classification) uses the same dataset and the same stratified 80/20 split (`random_state=42`). The two projects differ in the following ways, so their scores are not directly comparable:
+[`Bank-Churn-Classification-Model`](https://github.com/Ajanikehinde/Bank-Churn-Classification-Model) uses the same dataset and the same stratified 80/20 split (`random_state=42`). The two projects differ in the following ways, so their scores are not directly comparable:
 
-| | This project | `bank-churn-classification` |
+| | This project | `Bank-Churn-Classification-Model` |
 | --- | --- | --- |
 | Features | 7 (drops `Tenure`, `HasCrCard`, `EstimatedSalary`) | All 10 |
 | Class weighting | Tested (`class_weight='balanced'`) | Not used |
@@ -335,7 +335,7 @@ Potential future improvements include:
 ```text
 bank-churn-logistic-regression/
 │
-├── Churn_Logistic_Regression_corrected.ipynb
+├── Churn_Logistic_Regression_corrected_1.ipynb
 └── README.md
 ```
 
@@ -357,7 +357,7 @@ cd bank-churn-logistic-regression
 Launch Jupyter Notebook or JupyterLab and open:
 
 ```text
-Churn_Logistic_Regression_corrected.ipynb
+Churn_Logistic_Regression_corrected_1.ipynb
 ```
 
 ### 3. Dataset
